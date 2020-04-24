@@ -30,7 +30,7 @@ module "EC2" {
   source = "./EC2"
   VpcId = module.VPC.VpcID
   PublicSubnet = module.VPC.PublicSubnet
-  UnifyPoller-SecG = module.SECG.UnifyPoller-SecG
+  UnifiPoller-SecG = module.SECG.UnifiPoller-SecG
   SSM-Instance-Profile = module.IAM.SSM-Instance-Profile
 }
 

@@ -1,6 +1,6 @@
-# UnifyPoller
+# UnifiPoller
 
-Hello Kyle! This repository is intended to setup an environment with UnifyPoller. There are two main parts in this project. First one is terraform(tf) files to create the desired infrastructure. The second part is the bash scripts (sh) to build the correct packages to achieve our goal. This guide will lead you to correctly setup these two main parts.
+Hello! This repository is intended to setup an environment with UnifiPoller. There are two main parts in this project. First one is terraform(tf) files to create the desired infrastructure. The second part is the bash scripts (sh) to build the correct packages to achieve our goal. This guide will lead you to correctly setup these two main parts.
 
 1) First we will setup the infrastructure which will be independent from our bash scripts. To achieve this, first create a file called "secret-variables.auto.tfvars" in project folder and enter the below lines.
 
