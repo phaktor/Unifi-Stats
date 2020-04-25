@@ -36,6 +36,6 @@ resource "aws_instance" "UnifiPoller-Instance" {
 }
 
 resource "aws_eip_association" "eip_assoc" {
-  instance_id   = aws_instance.UnifyPoller-Instance.id
+  instance_id   = aws_instance.UnifiPoller-Instance.id
   allocation_id = aws_eip.ElasticIP.id
 }
