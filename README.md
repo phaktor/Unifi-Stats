@@ -12,7 +12,7 @@ Hello! This repository is intended to setup an environment with UnifiPoller. The
         terraform apply 
         #then type "yes" as input
         
-3) Our infrastructure is created successfully. We will start building the first tool called "Grafana". This tool is used to create great dashboards with the given data. Now navigate to the "Systems Manager">"Session Manager" tab in AWS console and start a session with our newly created instance. Perform the below changes. We will perform all steps with "root" user. Type "sudo su -" to switch to root user before starting.
+3) Our infrastructure is created successfully. Before continuing, log into the Unifi router and configure the firewall to open port 8443 (prior to controller 1.6.4) or port 443 (after 1.6.4) - make sure to lock down the source from the AWS EC2 Instance only. We will start building the first tool called "Grafana". This tool is used to create great dashboards with the given data. Now navigate to the "Systems Manager">"Session Manager" tab in AWS console and start a session with our newly created instance. Perform the below changes. We will perform all steps with "root" user. Type "sudo su -" to switch to root user before starting.
 
         - copy the content of "grafana_installer_1.sh" file in GitHub repository.
         - create a file with the same name and edit it in Linux terminal with below command. 
@@ -77,7 +77,7 @@ Hello! This repository is intended to setup an environment with UnifiPoller. The
 
         - Go and edit unifi-poller config file with "vi /etc/unifi-poller/up.conf" command.
         - Under [InfluxDB] section edit the "user" and "pass" lines with the ones that you've created.
-        - Under [unifi.defaults] section edit the "url" section and enter your Unifi-Controller's URL with :8443 port in the end.
+        - Under [unifi.defaults] section edit the "url" section and enter your Unifi-Controller's URL with :8443 port in the end (controller 1.6.4 or before) or :443 in the end (after controller 1.6.4).
         - Also edit the "user" and "pass" sections so that unifi-poller will be able to login to your Unifi-Controller   without any problem.
         - Run "systemctl restart unifi-poller" to reflect the changes.
 
