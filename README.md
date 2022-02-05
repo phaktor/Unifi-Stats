@@ -59,6 +59,7 @@ Hello! This repository is intended to setup an environment with UnifiPoller. The
         
 8) Grafana and InfluxDB processes are done. Now we will work on unifi-poller. First we will install unifi-poller package. Perform below steps to install unifi-poller.
 
+        - NOTE: need to update this section, URL changed to https://github.com/unpoller/unpoller/releases/download/v2.1.3/unifi-poller_2.1.3-884_amd64.deb
         - copy the content of "unifi-poller_installer_3.sh" file in GitHub repository.
         - create a file with the same name and edit it in Linux terminal with below command. 
         
